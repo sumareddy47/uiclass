@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>nikki calcu</title>
+	
+    <script type="text/javascript">
+       
+        function AddNum() {
+            var fn = document.getElementById("txtFN").value;
+            var sn = document.getElementById("txtSN").value;
+            var result = parseInt(fn) + parseInt(sn);
+            document.getElementById("txtResult").value = result;
+        }
+        function SubNum() {
+            var fn = document.getElementById("txtFN").value;
+            var sn = document.getElementById("txtSN").value;
+            var result = parseInt(fn) - parseInt(sn);
+            document.getElementById("txtResult").value = result;
+        }
+        function MulNum() {
+            var fn = document.getElementById("txtFN").value;
+            var sn = document.getElementById("txtSN").value;
+            var result = parseInt(fn) * parseInt(sn);
+            document.getElementById("txtResult").value = result;
+        }
+        function DivNum() {
+            var fn = document.getElementById("txtFN").value;
+            var sn = document.getElementById("txtSN").value;
+            var result = parseInt(fn) / parseInt(sn);
+            document.getElementById("txtResult").value = result;
+        }
+        function RemoveData(){
+            document.getElementById("txtFN").value="";
+            document.getElementById("txtSN").value="";
+            document.getElementById("txtResult").value="";
+            document.getElementById("txtResult").value = "";
+        
+
+        }
+        
+    </script>
+
+    
+</head>
+<body>
+
+    <table border= 1px solid black>
+	<caption> <strong>calculator</strong> </caption>
+	<tr style= "background-color:red">
+        <td>First Number:<input type="text" id="txtFN" /></td>
+        <br /><br />
+	</tr>
+        <td>Second Number:<input type="text" id="txtSN" /></td>
+        <br /><br />
+	<tr>
+        <td>
+		<input type="button" id="btnAdd" onclick="return AddNum();" value=" + " />
+        <input type="button" id="btnSub" onclick="return SubNum();" value=" - " />
+        <input type="button" id="btnMul" onclick="return MulNum();" value=" * " />
+        <input type="button" id="btnDiv" onclick="return DivNum();" value=" / " />
+        <input type="button" id="btnclear" onclick="return RemoveData();" value="clear" />
+		</td>
+	</tr>
+        <br />
+        <br />
+     <tr>   
+       <td> Result:<input type="text" id="txtResult" /></td>
+	</tr>
+        <br />
+        <br />
+    </table>
+</body>
+</html>
